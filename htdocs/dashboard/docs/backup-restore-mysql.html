@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Backup and Restore MySQL/MariaDB Databases</title>
+
+    <!-- Bootstrap CSS for Modern Layout -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS for Documentation -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .header-title {
+            padding: 60px 0;
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero {
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        article h2 {
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #007bff;
+            margin: 0 10px;
+        }
+
+        .imageblock img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <link href="/dashboard/images/favicon.png" rel="icon" type="image/png" />
+</head>
+
+<body class="docs">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/dashboard/index.html">Apache Friends</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/faq.html">FAQs</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/dashboard/howto.html">HOW-TO Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/phpinfo.php" target="_blank">PHPInfo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/phpmyadmin/">phpMyAdmin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="header-title">
+        <h1>Backup and Restore MySQL/MariaDB Databases</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="wrapper">
+        <div class="container my-5">
+            <article class="documentation">
+                <h2>Using phpMyAdmin</h2>
+                <p>XAMPP includes <a href="http://www.phpmyadmin.net/">phpMyAdmin</a>, a browser-based tool for managing MySQL/MariaDB databases. Follow these steps to backup a database:</p>
+                <ol>
+                    <li>Browse to <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a> and log in (default is <em>root</em> with no password).</li>
+                    <li>Select your database (e.g., <em>bitnami_wordpress</em>).</li>
+                    <div class="imageblock">
+                        <img src="./images/backup-restore-mysql/image1.png" alt="phpMyAdmin Database Selection">
+                    </div>
+                    <li>Click "Export" in the top navigation.</li>
+                    <div class="imageblock">
+                        <img src="./images/backup-restore-mysql/image2.png" alt="phpMyAdmin Export">
+                    </div>
+                    <li>Select "Quick" export and "SQL" as the format, then click "Go" to download the backup file.</li>
+                </ol>
+                <p>This will download a text file with SQL statements for your backup.</p>
+                <div class="imageblock">
+                    <img src="./images/backup-restore-mysql/image3.png" alt="SQL Backup File Download">
+                </div>
+
+                <h3>Restore with phpMyAdmin</h3>
+                <ol>
+                    <li>Browse to <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a> and log in.</li>
+                    <li>Create a new database, e.g., <em>myblog</em>.</li>
+                    <div class="imageblock">
+                        <img src="./images/backup-restore-mysql/image5.png" alt="Create New Database">
+                    </div>
+                    <li>Select the "Import" option and upload your backup file.</li>
+                    <li>Click "Go" to restore the database.</li>
+                    <div class="imageblock">
+                        <img src="./images/backup-restore-mysql/image7.png" alt="Import Database">
+                    </div>
+                </ol>
+
+                <h2>Using Command-Line Tools</h2>
+                <p>You can also backup and restore using command-line tools:</p>
+                <h3>Backup with <em>mysqldump</em></h3>
+                <pre><code>mysqldump --user=root --password="" bitnami_wordpress > bitnami_wordpress.sql</code></pre>
+                <p>This exports the database to <code>bitnami_wordpress.sql</code>.</p>
+                <div class="imageblock">
+                    <img src="./images/backup-restore-mysql/image11.png" alt="Command Line Backup">
+                </div>
+
+                <h3>Restore from Command Line</h3>
+                <pre><code>mysql --user=root --password="" --database=myblog < bitnami_wordpress.sql</code></pre>
+                <p>This command restores your backup file to the <em>myblog</em> database.</p>
+                <div class="imageblock">
+                    <img src="./images/backup-restore-mysql/image13.png" alt="Command Line Restore">
+                </div>
+
+                <div class="alert alert-warning">
+                    <strong>Note:</strong> Adjust the file size limits for uploads in <code>php.ini</code> if your database is large.
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2022 Apache Friends</p>
+                </div>
+                <div class="col-md-6 footer-links">
+                    <a href="https://www.apachefriends.org/blog.html">Blog</a>
+                    <a href="/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

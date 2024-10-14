@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>XAMPP FAQs for Windows</title>
+
+    <meta name="description" content="Instructions on how to install XAMPP for Windows distributions." />
+
+    <!-- Bootstrap CSS for Modern Layout -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS for XAMPP FAQs -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .header-title {
+            padding: 60px 0;
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+        }
+
+        .accordion .card-header {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .accordion .card-header button {
+            color: #fff;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #007bff;
+            margin: 0 10px;
+        }
+    </style>
+
+    <link href="/dashboard/images/favicon.png" rel="icon" type="image/png" />
+</head>
+
+<body class="faq">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/dashboard/index.html">Apache Friends</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                    <a class="nav-link" href="/phpmyadmin/">phpMyAdmin</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/phpinfo.php" target="_blank">PHPInfo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/howto.html">HOW-TO Guides</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="header-title">
+        <h1>Windows <span class="text-muted">Frequently Asked Questions</span></h1>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+     <div class="container my-5">
+         <div id="faqAccordion" class="accordion">
+             <!-- FAQ 1 -->
+             <div class="card">
+                 <div class="card-header" id="headingOne">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                             aria-controls="collapseOne">
+                             How do I install XAMPP?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         XAMPP for Windows exists in three different flavors: Installer, ZIP, and 7zip. The installer is the easiest way to install XAMPP. 
+                         To use ZIP or 7zip, simply extract the files and run the setup_xampp.bat file.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 2 -->
+             <div class="card">
+                 <div class="card-header" id="headingTwo">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                             aria-expanded="false" aria-controls="collapseTwo">
+                             Does XAMPP include MySQL or MariaDB?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         Since XAMPP 5.5.30 and 5.6.14, XAMPP ships with MariaDB instead of MySQL. The commands and tools are the same for both.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 3 -->
+             <div class="card">
+                 <div class="card-header" id="headingThree">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                             aria-expanded="false" aria-controls="collapseThree">
+                             How can I start XAMPP without setup?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         If you extract XAMPP in a top-level folder like "C:\" or "D:\", you can start most servers like Apache or MySQL directly without running setup_xampp.bat. 
+                         Using relative paths in the setup script is preferred if installing XAMPP on a USB drive.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 4 -->
+             <div class="card">
+                 <div class="card-header" id="headingFour">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                             aria-expanded="false" aria-controls="collapseFour">
+                             How do I start and stop XAMPP?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         The XAMPP Control Panel is the universal control center for starting/stopping services such as Apache, MySQL, FileZilla, and Mercury. You can also use batch files like xampp_start.exe and xampp_stop.exe.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 5 -->
+             <div class="card">
+                 <div class="card-header" id="headingFive">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                             aria-expanded="false" aria-controls="collapseFive">
+                             How can I test that everything worked?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         Open your browser and type <code>http://localhost/</code> or <code>http://127.0.0.1/</code>. If everything is set up correctly, you should see the XAMPP start page.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 6 -->
+             <div class="card">
+                 <div class="card-header" id="headingSix">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                             aria-expanded="false" aria-controls="collapseSix">
+                             How can I install a server as a service?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         Each XAMPP server (Apache, MySQL, FileZilla) can be installed as a Windows service from the XAMPP Control Panel. Make sure to run the Control Panel as an Administrator when installing services.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 7 -->
+             <div class="card">
+                 <div class="card-header" id="headingSeven">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                             aria-expanded="false" aria-controls="collapseSeven">
+                             Is XAMPP production ready?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         XAMPP is not intended for production use but for development environments. It is open and lacks security measures necessary for a live environment. Ensure you secure the installation before putting it online.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 8 -->
+             <div class="card">
+                 <div class="card-header" id="headingEight">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                             aria-expanded="false" aria-controls="collapseEight">
+                             How do I uninstall XAMPP?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         If you installed XAMPP via the installer, use the Uninstaller program to remove it. For ZIP and 7zip installations, stop all services and delete the entire XAMPP directory.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 9 -->
+             <div class="card">
+                 <div class="card-header" id="headingNine">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
+                             aria-expanded="false" aria-controls="collapseNine">
+                             How do I send email with XAMPP?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         To configure XAMPP for email, edit the <code>php.ini</code> and <code>sendmail.ini</code> files to configure the SMTP server. Restart Apache after making changes.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- FAQ 10 -->
+             <div class="card">
+                 <div class="card-header" id="headingTen">
+                     <h5 class="mb-0">
+                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
+                             aria-expanded="false" aria-controls="collapseTen">
+                             How can I set a root password in MySQL?
+                         </button>
+                     </h5>
+                 </div>
+                 <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#faqAccordion">
+                     <div class="card-body">
+                         Open the XAMPP Shell and run the following command: <code>mysqladmin.exe -u root password [yourpassword]</code>. This sets the root password.
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- Add more FAQs here following the same structure -->
+ 
+         </div>
+     </div>
+ </section>
+ 
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2022 Apache Friends</p>
+                </div>
+                <div class="col-md-6 footer-links">
+                    <a href="https://www.apachefriends.org/blog.html">Blog</a>
+                    <a href="/privacy_policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
