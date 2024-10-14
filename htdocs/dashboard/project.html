@@ -6,17 +6,13 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>XAMPP Dashboard</title>
+    <title>My Projects</title>
 
-    <!-- Description and Keywords for SEO -->
-    <meta name="description" content="XAMPP Dashboard with Apache, MariaDB, PHP, and Perl." />
-    <meta name="keywords" content="xampp, apache, php, perl, mariadb, server, dashboard" />
-
-    <!-- Bootstrap for Modern Layout -->
+    <!-- Bootstrap CSS for Modern Layout -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
-    <!-- Custom CSS for Dashboard -->
+    <!-- Custom CSS -->
     <style>
         body {
             background-color: #f8f9fa;
@@ -39,12 +35,16 @@
             text-align: center;
         }
 
-        .header-title img {
-            height: 80px;
+        .header-title h1 {
+            font-size: 2.5rem;
         }
 
-        .content-section {
+        .projects {
             padding: 40px 0;
+        }
+
+        .project-card {
+            margin-bottom: 30px;
         }
 
         footer {
@@ -64,7 +64,7 @@
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">XAMPP Dashboard</a>
+        <a class="navbar-brand" href="#">My Projects</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -83,74 +83,63 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/dashboard/faq.html">FAQs</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/dashboard/project.html">My Projects</a>
-                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="header-title">
-        <img src="/dashboard/images/xampp-logo.svg" alt="XAMPP Logo" />
-        <h1>XAMPP <span class="text-muted">Apache + MariaDB + PHP + Perl</span></h1>
+        <h1>My Projects</h1>
+        <p>Navigate to any of my projects below</p>
     </div>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <h2>Welcome to XAMPP for Windows 8.2.12</h2>
-                    <p class="lead">
-                        You have successfully installed XAMPP! Now you can start using Apache, MariaDB, PHP, and other components. Explore the FAQs or check out the HOW-TO guides to get started.
-                    </p>
+    <!-- Projects Section -->
+    <div class="container projects">
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Description of Project 1. This could be an application or a website.</p>
+                        <a href="../projects/project1/index.html" class="btn btn-primary">Go to Project 1</a>
+                    </div>
                 </div>
             </div>
-            <div class="row text-center mt-5">
-                <div class="col-md-4">
-                    <i class="fas fa-server fa-3x mb-3 text-primary"></i>
-                    <h4>Server Status</h4>
-                    <p>Check your Apache and MariaDB server status.</p>
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Description of Project 2. Learn more about this exciting project.</p>
+                        <a href="../projects/project2/index.html" class="btn btn-primary">Go to Project 2</a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <i class="fas fa-code fa-3x mb-3 text-success"></i>
-                    <h4>Develop Locally</h4>
-                    <p>Start developing PHP applications locally in a secure environment.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-user-shield fa-3x mb-3 text-danger"></i>
-                    <h4>Security Note</h4>
-                    <p>XAMPP is for local development only. Not recommended for production.</p>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Description of Project 3. This project showcases something cool.</p>
+                        <a href="../projects/project3/index.html" class="btn btn-primary">Go to Project 3</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Community Section -->
-    <section class="content-section bg-light">
-        <div class="container text-center">
-            <h3>Join the Community</h3>
-            <p>Be a part of the XAMPP community and follow us on social media.</p>
-            <a href="https://twitter.com/apachefriends" class="btn btn-primary mr-2">
-                <i class="fab fa-twitter"></i> Twitter
-            </a>
-            <a href="https://www.facebook.com/we.are.xampp" class="btn btn-primary">
-                <i class="fab fa-facebook"></i> Facebook
-            </a>
-        </div>
-    </section>
+        <!-- Add more projects as needed -->
+    </div>
 
     <!-- Footer Section -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; 2022 Apache Friends</p>
+                    <p>&copy; 2022 My Projects</p>
                 </div>
                 <div class="col-md-6 footer-links">
-                    <a href="https://www.apachefriends.org/blog.html">Blog</a>
-                    <a href="/privacy_policy.html">Privacy Policy</a>
+                    <a href="../privacy_policy.html">Privacy Policy</a>
+                    <a href="../dashboard/contact.html">Contact</a>
                 </div>
             </div>
         </div>
